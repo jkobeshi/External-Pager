@@ -1,0 +1,132 @@
+Pager started with 4 physical memory pages
+vm_create	(137, 205)
+vm_create returned 0
+vm_switch	(205)
+					returning to (205) with pages:
+vm_create	(205, 206)
+vm_create returned 0
+					returning to (205) with pages:
+vm_map		(205)	0x0	0 //char *p0 = (char *) vm_map(nullptr, 0);
+vm_map returned 0x600000000						
+					returning to (205) with pages:
+					r	vpage 0x60000	ppage 0x0
+vm_fault	(205)	0x600000000	write //strcpy(p0, "lampson83.txt");
+vm_fault returned 0
+					returning to (205) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_map		(205)	0x600000000	1	//char *p1 = (char *) vm_map(p0, 1);
+vm_map returned 0x600010000
+					returning to (205) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_map		(205)	0x600000000	1    //char *p2 = (char *) vm_map(p0, 1);
+vm_map returned 0x600020000
+					returning to (205) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_map		(205)	0x600000000	1	//char *p22 = (char *) vm_map(p0, 1);
+vm_map returned 0x600030000
+					returning to (205) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_map		(205)	0x600000000	1	//char *p23 = (char *) vm_map(p0, 1);
+vm_map returned 0x600040000
+					returning to (205) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_map		(205)	0x600000000	0	//char *p3 = (char *) vm_map(p0, 0);
+vm_map returned 0x600050000
+					returning to (205) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_fault	(205)	0x600050000	write   //strcpy(p3, "gibberish");
+file_read	lampson83.txt	0 	// for (unsigned int i=0; i< 1937; i++) { cout << p3[i]; }      
+vm_fault returned 0
+					returning to (205) with pages:
+					rw	vpage 0x60000	ppage 0x1
+					rw	vpage 0x60005	ppage 0x2
+vm_switch	(206)									//vm_yield();
+					returning to (206) with pages:
+vm_map		(206)	0x0	0
+vm_map returned 0x600000000			//char *p0 = (char *) vm_map(nullptr, 0);
+					returning to (206) with pages:
+					r	vpage 0x60000	ppage 0x0
+vm_map		(206)	0x0	0
+vm_map returned 0x600010000			//char *p1 = (char *) vm_map(nullptr, 0);
+					returning to (206) with pages:
+					r	vpage 0x60000	ppage 0x0
+					r	vpage 0x60001	ppage 0x0
+vm_map		(206)	0x0	0
+vm_map returned 0x600020000			//char *p2 = (char *) vm_map(nullptr, 0);
+					returning to (206) with pages:
+					r	vpage 0x60000	ppage 0x0
+					r	vpage 0x60001	ppage 0x0
+					r	vpage 0x60002	ppage 0x0
+vm_fault	(206)	0x600000000	write		//strcpy(p0, "lampson83.txt");
+vm_fault returned 0
+					returning to (206) with pages:
+					rw	vpage 0x60000	ppage 0x3
+					r	vpage 0x60001	ppage 0x0
+					r	vpage 0x60002	ppage 0x0
+vm_fault	(206)	0x600010000	write		//strcpy(p1, "data1.bin");
+file_write	<swap>	0
+vm_fault returned 0
+					returning to (206) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					r	vpage 0x60002	ppage 0x0
+vm_fault	(206)	0x600020000	write		//strcpy(p2, "data2.bin");
+file_write	lampson83.txt	0
+vm_fault returned 0
+					returning to (206) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+vm_map		(206)	0x600020000	1			//char *p12 = (char *) vm_map(p2, 1);
+vm_map returned 0x600030000
+					returning to (206) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+vm_map		(206)	0x600020000	1			//char *p13 = (char *) vm_map(p2, 1);
+vm_map returned 0x600040000
+					returning to (206) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+vm_map		(206)	0x600020000	1			//char *p14 = (char *) vm_map(p2, 1);
+vm_map returned 0x600050000
+					returning to (206) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+vm_map		(206)	0x600000000	0			//char *p3 = (char *) vm_map(p0, 0);
+vm_map returned 0x600060000
+					returning to (206) with pages:
+					r	vpage 0x60000	ppage 0x3
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+vm_fault	(206)	0x600060000	read
+file_write	<swap>	1
+file_read	lampson83.txt	0		//for (unsigned int i=0; i< 1937; i++) { cout << p3[i]; }
+vm_fault returned 0
+					returning to (206) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+					r	vpage 0x60006	ppage 0x3
+vm_switch	(205)
+					returning to (205) with pages:
+					r	vpage 0x60005	ppage 0x3
+vm_map		(205)	0x5578a2eef060	0
+vm_map returned 0x0
+					returning to (205) with pages:
+					r	vpage 0x60005	ppage 0x3
+vm_destroy	(205)
+vm_switch	(206)
+					returning to (206) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+					r	vpage 0x60006	ppage 0x3
+vm_map		(206)	0x5578a2eef060	0
+vm_map returned 0x0
+					returning to (206) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+					r	vpage 0x60006	ppage 0x3
+vm_map		(206)	0x5578a2eef060	1
+vm_map returned 0x0
+					returning to (206) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+					r	vpage 0x60006	ppage 0x3
+vm_destroy	(206)

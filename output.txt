@@ -1,0 +1,131 @@
+Pager started with 4 physical memory pages
+vm_create	(15967, 15980)
+vm_create returned 0
+vm_switch	(15980)
+					returning to (15980) with pages:
+vm_create	(15980, 15981)
+vm_create returned 0
+					returning to (15980) with pages:
+vm_map		(15980)	0x0	0
+vm_map returned 0x600000000
+					returning to (15980) with pages:
+					r	vpage 0x60000	ppage 0x0
+vm_fault	(15980)	0x600000000	write
+vm_fault returned 0
+					returning to (15980) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_map		(15980)	0x600000000	1
+vm_map returned 0x600010000
+					returning to (15980) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_map		(15980)	0x600000000	1
+vm_map returned 0x600020000
+					returning to (15980) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_map		(15980)	0x600000000	1
+vm_map returned 0x600030000
+					returning to (15980) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_map		(15980)	0x600000000	1
+vm_map returned 0x600040000
+					returning to (15980) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_map		(15980)	0x600000000	0
+vm_map returned 0x600050000
+					returning to (15980) with pages:
+					rw	vpage 0x60000	ppage 0x1
+vm_fault	(15980)	0x600050000	write
+file_read	lampson83.txt	0
+vm_fault returned 0
+					returning to (15980) with pages:
+					rw	vpage 0x60000	ppage 0x1
+					rw	vpage 0x60005	ppage 0x2
+vm_switch	(15981)
+					returning to (15981) with pages:
+vm_map		(15981)	0x0	0
+vm_map returned 0x600000000
+					returning to (15981) with pages:
+					r	vpage 0x60000	ppage 0x0
+vm_map		(15981)	0x0	0
+vm_map returned 0x600010000
+					returning to (15981) with pages:
+					r	vpage 0x60000	ppage 0x0
+					r	vpage 0x60001	ppage 0x0
+vm_map		(15981)	0x0	0
+vm_map returned 0x600020000
+					returning to (15981) with pages:
+					r	vpage 0x60000	ppage 0x0
+					r	vpage 0x60001	ppage 0x0
+					r	vpage 0x60002	ppage 0x0
+vm_fault	(15981)	0x600000000	write
+vm_fault returned 0
+					returning to (15981) with pages:
+					rw	vpage 0x60000	ppage 0x3
+					r	vpage 0x60001	ppage 0x0
+					r	vpage 0x60002	ppage 0x0
+vm_fault	(15981)	0x600010000	write
+file_write	<swap>	0
+vm_fault returned 0
+					returning to (15981) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					r	vpage 0x60002	ppage 0x0
+vm_fault	(15981)	0x600020000	write
+file_write	lampson83.txt	0
+vm_fault returned 0
+					returning to (15981) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+vm_map		(15981)	0x600020000	1
+vm_map returned 0x600030000
+					returning to (15981) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+vm_map		(15981)	0x600020000	1
+vm_map returned 0x600040000
+					returning to (15981) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+vm_map		(15981)	0x600020000	1
+vm_map returned 0x600050000
+					returning to (15981) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+vm_map		(15981)	0x600000000	0
+vm_map returned 0x600060000
+					returning to (15981) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+vm_fault	(15981)	0x600060000	read
+file_write	<swap>	1
+file_read	lampson83.txt	0
+vm_fault returned 0
+					returning to (15981) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+					r	vpage 0x60006	ppage 0x3
+vm_switch	(15980)
+					returning to (15980) with pages:
+					r	vpage 0x60005	ppage 0x3
+vm_map		(15980)	0x55fa199eb038	0
+vm_map returned 0x0
+					returning to (15980) with pages:
+					r	vpage 0x60005	ppage 0x3
+vm_destroy	(15980)
+vm_switch	(15981)
+					returning to (15981) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+					r	vpage 0x60006	ppage 0x3
+vm_map		(15981)	0x55fa199eb038	0
+vm_map returned 0x0
+					returning to (15981) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+					r	vpage 0x60006	ppage 0x3
+vm_map		(15981)	0x55fa199eb038	1
+vm_map returned 0x0
+					returning to (15981) with pages:
+					rw	vpage 0x60001	ppage 0x1
+					rw	vpage 0x60002	ppage 0x2
+					r	vpage 0x60006	ppage 0x3
+vm_destroy	(15981)
